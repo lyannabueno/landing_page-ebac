@@ -1,4 +1,6 @@
 @import '_hero';
+@import 'componentes/_infos-bar.less';
+@import 'componentes/_buttons.less';
 
 * {
     margin: 0;
@@ -6,18 +8,19 @@
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
     color: #fff;
+    list-style: none;
 }
 
 .container  {
     max-width: 960px;
     width: 100%;
     margin: 0 auto;
+    
+    @media (max-width: 1024px) {
+        max-width: 90%;
+    }
 
     @media (max-width: 640px) {
         max-width: 80%;
-    }
-
-    @media (max-width: 1024px) {
-        max-width: 90%;
     }
 }
