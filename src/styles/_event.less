@@ -1,0 +1,63 @@
+.event {
+    padding: 80px 0;
+
+    &--front_end {
+        background-image: linear-gradient(@blue1, @blue2); // raio do degradê, cor inicial, cor final
+    }
+
+    &--ui_ux {
+        background-image: linear-gradient(@blue2, @pink); // raio do degradê, cor inicial, cor final
+    }
+
+    &--data_science {
+        background-image: linear-gradient(@pink, @yellow); // raio do degradê, cor inicial, cor final
+    }
+
+    &--back_end {
+        background-image: linear-gradient(@yellow, @pink); // raio do degradê, cor inicial, cor final
+    }
+
+    &--image-left {
+        .container {
+            flex-direction: row-reverse; // inverte o lado da imagem
+        }
+    }
+
+    .container {
+        display: flex;
+        gap: 40px;
+    }
+
+    &__image {
+        max-width: 360px;
+    }
+
+    &__details {
+
+        &__title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        &__description {
+            line-height: 22px;
+        }
+    }
+
+    @media (max-width: 640px) {
+        
+        .container {
+            display: block;;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__details {
+            margin: 0 0 16px 0;
+        }
+    }
+
+}
